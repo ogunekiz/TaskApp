@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Task/GetTask": {
+    "/api/Task/GetTask/{id}": {
       "get": {
         "tags": [
           "Task"
@@ -13,7 +13,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -101,7 +102,7 @@
         }
       }
     },
-    "/api/Task/DeleteTask": {
+    "/api/Task/DeleteTask/{id}": {
       "delete": {
         "tags": [
           "Task"
@@ -109,7 +110,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"

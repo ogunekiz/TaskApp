@@ -16,7 +16,7 @@ namespace TaskApp.API.Controllers
         }
 
 
-        [HttpGet("GetTask")]
+        [HttpGet("GetTask/{id}")]
         public IActionResult GetTask(int id)
         {
             Task? task = _taskAppService.GetById(id);
@@ -82,7 +82,7 @@ namespace TaskApp.API.Controllers
         }
 
 
-        [HttpDelete("DeleteTask")]
+        [HttpDelete("DeleteTask/{id}")]
         public IActionResult DeleteTask(int id)
         {
             bool deletedStatus = _taskAppService.Delete(id);
