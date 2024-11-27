@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using TaskApp.Bll.Abstract;
+using TaskApp.Bll.Concrete;
 using TaskApp.Dal.DataContext;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<TaskAppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DBConnection")));
 
+builder.Services.AddScoped<ITaskAppService, TaskAppRepository>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
