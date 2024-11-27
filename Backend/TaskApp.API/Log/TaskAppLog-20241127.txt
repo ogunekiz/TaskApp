@@ -144,3 +144,129 @@ ORDER BY "t"."Id" DESC
 2024-11-27 19:25:38.336 +03:00 [INF] Executed endpoint 'TaskApp.API.Controllers.TaskController.GetTaskList (TaskApp.API)'
 2024-11-27 19:25:38.338 +03:00 [INF] HTTP GET /api/Task/GetTaskList responded 200 in 33.9744 ms
 2024-11-27 19:25:38.346 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/Task/GetTaskList - 200 null application/json; charset=utf-8 46.9366ms
+2024-11-27 19:47:23.111 +03:00 [INF] Now listening on: http://localhost:5000
+2024-11-27 19:47:23.291 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-27 19:47:23.321 +03:00 [INF] Hosting environment: Development
+2024-11-27 19:47:23.429 +03:00 [INF] Content root path: C:\Users\pixel\Desktop\rst\TaskApp\Backend\TaskApp.API
+2024-11-27 19:47:40.974 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Task/GetTaskList - null null
+2024-11-27 19:47:41.129 +03:00 [INF] CORS policy execution successful.
+2024-11-27 19:47:41.140 +03:00 [INF] Executing endpoint 'TaskApp.API.Controllers.TaskController.GetTaskList (TaskApp.API)'
+2024-11-27 19:47:41.173 +03:00 [INF] Route matched with {action = "GetTaskList", controller = "Task"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetTaskList() on controller TaskApp.API.Controllers.TaskController (TaskApp.API).
+2024-11-27 19:47:43.457 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."Id", "t"."CreatedAt", "t"."Description", "t"."Title"
+FROM "Tasks" AS "t"
+ORDER BY "t"."Id" DESC
+2024-11-27 19:47:43.627 +03:00 [INF] Task list retrieved successfully.
+2024-11-27 19:47:43.658 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TaskApp.Entity.Concrete.Task, TaskApp.Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-27 19:47:43.729 +03:00 [INF] Executed action TaskApp.API.Controllers.TaskController.GetTaskList (TaskApp.API) in 2544.7546ms
+2024-11-27 19:47:43.733 +03:00 [INF] Executed endpoint 'TaskApp.API.Controllers.TaskController.GetTaskList (TaskApp.API)'
+2024-11-27 19:47:43.745 +03:00 [INF] HTTP GET /api/Task/GetTaskList responded 200 in 2624.0121 ms
+2024-11-27 19:47:43.811 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/Task/GetTaskList - 200 null application/json; charset=utf-8 2853.4822ms
+2024-11-27 19:47:47.476 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/Task/DeleteTask/20 - null null
+2024-11-27 19:47:47.491 +03:00 [INF] CORS policy execution successful.
+2024-11-27 19:47:47.509 +03:00 [INF] HTTP OPTIONS /api/Task/DeleteTask/20 responded 204 in 22.7051 ms
+2024-11-27 19:47:47.515 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/Task/DeleteTask/20 - 204 null null 39.4473ms
+2024-11-27 19:47:47.526 +03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5000/api/Task/DeleteTask/20 - null null
+2024-11-27 19:47:47.534 +03:00 [INF] CORS policy execution successful.
+2024-11-27 19:47:47.535 +03:00 [INF] Executing endpoint 'TaskApp.API.Controllers.TaskController.DeleteTask (TaskApp.API)'
+2024-11-27 19:47:47.553 +03:00 [INF] Route matched with {action = "DeleteTask", controller = "Task"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteTask(Int32) on controller TaskApp.API.Controllers.TaskController (TaskApp.API).
+2024-11-27 19:47:47.676 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."Id", "t"."CreatedAt", "t"."Description", "t"."Title"
+FROM "Tasks" AS "t"
+WHERE "t"."Id" = @__id_0
+LIMIT 1
+2024-11-27 19:47:47.868 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "Tasks"
+WHERE "Id" = @p0
+RETURNING 1;
+2024-11-27 19:47:47.895 +03:00 [INF] Task with id 20 deleted successfully.
+2024-11-27 19:47:47.899 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Boolean'.
+2024-11-27 19:47:47.917 +03:00 [INF] Executed action TaskApp.API.Controllers.TaskController.DeleteTask (TaskApp.API) in 356.0603ms
+2024-11-27 19:47:47.927 +03:00 [INF] Executed endpoint 'TaskApp.API.Controllers.TaskController.DeleteTask (TaskApp.API)'
+2024-11-27 19:47:47.932 +03:00 [INF] HTTP DELETE /api/Task/DeleteTask/20 responded 200 in 398.6440 ms
+2024-11-27 19:47:47.947 +03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5000/api/Task/DeleteTask/20 - 200 null application/json; charset=utf-8 421.6202ms
+2024-11-27 19:47:47.959 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Task/GetTaskList - null null
+2024-11-27 19:47:47.966 +03:00 [INF] CORS policy execution successful.
+2024-11-27 19:47:47.967 +03:00 [INF] Executing endpoint 'TaskApp.API.Controllers.TaskController.GetTaskList (TaskApp.API)'
+2024-11-27 19:47:47.970 +03:00 [INF] Route matched with {action = "GetTaskList", controller = "Task"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetTaskList() on controller TaskApp.API.Controllers.TaskController (TaskApp.API).
+2024-11-27 19:47:48.113 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."Id", "t"."CreatedAt", "t"."Description", "t"."Title"
+FROM "Tasks" AS "t"
+ORDER BY "t"."Id" DESC
+2024-11-27 19:47:48.119 +03:00 [INF] Task list retrieved successfully.
+2024-11-27 19:47:48.127 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TaskApp.Entity.Concrete.Task, TaskApp.Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-27 19:47:48.133 +03:00 [INF] Executed action TaskApp.API.Controllers.TaskController.GetTaskList (TaskApp.API) in 150.0063ms
+2024-11-27 19:47:48.137 +03:00 [INF] Executed endpoint 'TaskApp.API.Controllers.TaskController.GetTaskList (TaskApp.API)'
+2024-11-27 19:47:48.152 +03:00 [INF] HTTP GET /api/Task/GetTaskList responded 200 in 185.9606 ms
+2024-11-27 19:47:48.161 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/Task/GetTaskList - 200 null application/json; charset=utf-8 201.6803ms
+2024-11-27 19:47:58.044 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/Task/AddTask - null null
+2024-11-27 19:47:58.061 +03:00 [INF] CORS policy execution successful.
+2024-11-27 19:47:58.063 +03:00 [INF] HTTP OPTIONS /api/Task/AddTask responded 204 in 2.7077 ms
+2024-11-27 19:47:58.077 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5000/api/Task/AddTask - 204 null null 33.2562ms
+2024-11-27 19:47:58.090 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/api/Task/AddTask - application/json 49
+2024-11-27 19:47:58.096 +03:00 [INF] CORS policy execution successful.
+2024-11-27 19:47:58.103 +03:00 [INF] Executing endpoint 'TaskApp.API.Controllers.TaskController.AddTask (TaskApp.API)'
+2024-11-27 19:47:58.108 +03:00 [INF] Route matched with {action = "AddTask", controller = "Task"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddTask(TaskApp.Entity.Concrete.Task) on controller TaskApp.API.Controllers.TaskController (TaskApp.API).
+2024-11-27 19:47:58.190 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = 13), @p2='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Tasks" ("CreatedAt", "Description", "Title")
+VALUES (@p0, @p1, @p2)
+RETURNING "Id";
+2024-11-27 19:47:58.214 +03:00 [INF] Task with id 23 added successfully.
+2024-11-27 19:47:58.219 +03:00 [INF] Executing CreatedAtActionResult, writing value of type 'TaskApp.Entity.Concrete.Task'.
+2024-11-27 19:47:58.242 +03:00 [INF] Executed action TaskApp.API.Controllers.TaskController.AddTask (TaskApp.API) in 129.4596ms
+2024-11-27 19:47:58.245 +03:00 [INF] Executed endpoint 'TaskApp.API.Controllers.TaskController.AddTask (TaskApp.API)'
+2024-11-27 19:47:58.247 +03:00 [INF] HTTP POST /api/Task/AddTask responded 201 in 150.7722 ms
+2024-11-27 19:47:58.252 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/api/Task/AddTask - 201 null application/json; charset=utf-8 161.6787ms
+2024-11-27 19:47:58.263 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Task/GetTaskList - null null
+2024-11-27 19:47:58.276 +03:00 [INF] CORS policy execution successful.
+2024-11-27 19:47:58.280 +03:00 [INF] Executing endpoint 'TaskApp.API.Controllers.TaskController.GetTaskList (TaskApp.API)'
+2024-11-27 19:47:58.289 +03:00 [INF] Route matched with {action = "GetTaskList", controller = "Task"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetTaskList() on controller TaskApp.API.Controllers.TaskController (TaskApp.API).
+2024-11-27 19:47:58.330 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."Id", "t"."CreatedAt", "t"."Description", "t"."Title"
+FROM "Tasks" AS "t"
+ORDER BY "t"."Id" DESC
+2024-11-27 19:47:58.343 +03:00 [INF] Task list retrieved successfully.
+2024-11-27 19:47:58.345 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[TaskApp.Entity.Concrete.Task, TaskApp.Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-27 19:47:58.351 +03:00 [INF] Executed action TaskApp.API.Controllers.TaskController.GetTaskList (TaskApp.API) in 39.4858ms
+2024-11-27 19:47:58.354 +03:00 [INF] Executed endpoint 'TaskApp.API.Controllers.TaskController.GetTaskList (TaskApp.API)'
+2024-11-27 19:47:58.357 +03:00 [INF] HTTP GET /api/Task/GetTaskList responded 200 in 81.2237 ms
+2024-11-27 19:47:58.363 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/Task/GetTaskList - 200 null application/json; charset=utf-8 100.0758ms
+2024-11-27 19:57:46.148 +03:00 [INF] Now listening on: http://localhost:5000
+2024-11-27 19:57:46.488 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-27 19:57:46.491 +03:00 [INF] Hosting environment: Development
+2024-11-27 19:57:46.493 +03:00 [INF] Content root path: C:\Users\pixel\Desktop\rst\TaskApp\Backend\TaskApp.API
+2024-11-27 19:58:50.976 +03:00 [INF] Now listening on: http://localhost:5000
+2024-11-27 19:58:51.139 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-27 19:58:51.148 +03:00 [INF] Hosting environment: Development
+2024-11-27 19:58:51.182 +03:00 [INF] Content root path: C:\Users\pixel\Desktop\rst\TaskApp\Backend\TaskApp.API
+2024-11-27 20:03:53.985 +03:00 [INF] Now listening on: http://localhost:5000
+2024-11-27 20:03:54.179 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-27 20:03:54.210 +03:00 [INF] Hosting environment: Development
+2024-11-27 20:03:54.219 +03:00 [INF] Content root path: C:\Users\pixel\Desktop\rst\TaskApp\Backend\TaskApp.API
+2024-11-27 20:04:06.509 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/Task/GetTaskList - null null
+2024-11-27 20:04:06.629 +03:00 [INF] CORS policy execution successful.
+2024-11-27 20:04:11.080 +03:00 [INF] Executing endpoint 'TaskApp.API.Controllers.TaskController.GetTaskList (TaskApp.API)'
+2024-11-27 20:04:11.105 +03:00 [INF] Route matched with {action = "GetTaskList", controller = "Task"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetTaskList() on controller TaskApp.API.Controllers.TaskController (TaskApp.API).
+2024-11-27 20:04:16.257 +03:00 [INF] Executed action TaskApp.API.Controllers.TaskController.GetTaskList (TaskApp.API) in 5143.1623ms
+2024-11-27 20:04:16.268 +03:00 [INF] Executed endpoint 'TaskApp.API.Controllers.TaskController.GetTaskList (TaskApp.API)'
+2024-11-27 20:04:21.067 +03:00 [ERR] An error occurred during the request.
+System.Exception: Simulated exception in Add method.
+   at TaskApp.API.Controllers.TaskController.GetTaskList() in C:\Users\pixel\Desktop\rst\TaskApp\Backend\TaskApp.API\Controllers\TaskController.cs:line 45
+   at lambda_method3(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at TaskApp.API.Middleware.ErrorHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\pixel\Desktop\rst\TaskApp\Backend\TaskApp.API\Middleware\ErrorHandlingMiddleware.cs:line 18
+2024-11-27 20:04:45.458 +03:00 [ERR] HTTP GET /api/Task/GetTaskList responded 500 in 38836.9796 ms
+2024-11-27 20:04:45.469 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/Task/GetTaskList - 500 null application/json 38973.571ms
