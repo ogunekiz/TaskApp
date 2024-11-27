@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TaskApp.Dal\TaskApp.Dal.csproj" />
+  </ItemGroup>
+
 </Project>

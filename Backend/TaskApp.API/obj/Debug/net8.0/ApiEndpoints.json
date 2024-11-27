@@ -1,0 +1,76 @@
+[
+  {
+    "ContainingType": "TaskApp.API.Controllers.TaskController",
+    "Method": "AddTask",
+    "RelativePath": "api/Task/AddTask",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newTask",
+        "Type": "TaskApp.Entity.Concrete.Task",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskApp.API.Controllers.TaskController",
+    "Method": "DeleteTask",
+    "RelativePath": "api/Task/DeleteTask",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskApp.API.Controllers.TaskController",
+    "Method": "GetTask",
+    "RelativePath": "api/Task/GetTask",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskApp.API.Controllers.TaskController",
+    "Method": "GetTaskList",
+    "RelativePath": "api/Task/GetTaskList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TaskApp.API.Controllers.TaskController",
+    "Method": "UpdateTask",
+    "RelativePath": "api/Task/UpdateTask",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateTask",
+        "Type": "TaskApp.Entity.Concrete.Task",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
