@@ -44,6 +44,14 @@ function TaskComponent() {
             })
             .catch(error => {
                 console.error('Error fetching data: ', error);
+                MySwal.fire({
+                    title: "Error!",
+                    text: "Error fetching data",
+                    icon: "error",
+                    confirmButtonText: "Ok",
+                    confirmButtonColor: "#4caf50",
+                });
+                setLoading(false);
             });
     };
 
