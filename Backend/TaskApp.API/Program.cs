@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using TaskApp.API.Middleware;
 using TaskApp.Bll.Abstract;
 using TaskApp.Bll.Concrete;
 using TaskApp.Dal.DataContext;
@@ -44,6 +45,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors("AllowReactApp");
+
+app.UseMiddleware<ErrorHandlingMiddleware>();
 
 app.UseAuthorization();
 
