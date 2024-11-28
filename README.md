@@ -1,4 +1,4 @@
-# Project Name
+# TaskApp FullStack Project
 
 A full stack application developed with .NET Core 8.0 API and React, using SQLite database. The project is structured with a layered architecture. **ErrorHandler Middleware** is used for error tracing, **Serilog** is used for logging. Tests are written in **xUnit**.
 
